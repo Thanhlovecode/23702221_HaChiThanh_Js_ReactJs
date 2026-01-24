@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const scoreDolphins = (97 + 112 + 80) / 3;
+        const scoreKoalas = (109 + 95 + 50) / 3;
+        console.log(scoreDolphins, scoreKoalas);
+
+        if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+        console.log('Dolphins win the trophy');
+        } else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+        console.log('Koalas win the trophy');
+        } else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+        console.log('Both win the trophy!');
+        } else {
+        console.log('No one wins the trophy');
+        }
+
+    </script>
+</body>
+</html>
