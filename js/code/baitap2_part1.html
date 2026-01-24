@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <input type="text" id="massMark" value="78">
+    <input type="text" id="heightMark" value="1.69">
+    <input type="text" id="massJohn" value="92">
+    <input type="text" id="heightJohn" value="1.95">
+    <button id="btnCal">Calculate</button>
+
+    <script>
+        var cal_btn = document.getElementById("btnCal");
+
+        cal_btn.onclick = () => {
+            var mass_Mark = Number(document.getElementById("massMark").value);
+            var height_Mark = Number(document.getElementById("heightMark").value);
+            var mass_John = Number(document.getElementById("massJohn").value);
+            var height_John = Number(document.getElementById("heightJohn").value);
+
+            var BMI_Mark = mass_Mark / Math.pow(height_Mark, 2);
+            var BMI_John = mass_John / Math.pow(height_John, 2);
+
+            if (BMI_Mark > BMI_John) {
+                console.log("Mark's BMI is higher than John's");
+                console.log(`Mark's BMI (${BMI_Mark.toFixed(2)}) is higher than John's (${BMI_John.toFixed(2)})`);
+            } else {
+                console.log("John's BMI is higher than Mark's");
+                console.log(`John's BMI (${BMI_John.toFixed(2)}) is higher than Mark's (${BMI_Mark.toFixed(2)})`);
+            }
+        }
+    </script>
+</body>
+</html>
