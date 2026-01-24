@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="bill-value">
+    <button id="btn-calc">Calculate Bill</button>
+    <script>
+        var tip;
+        var calculateButton = document.getElementById("btn-calc");
+        calculateButton.onclick = () => {
+            var input = Number(document.getElementById("bill-value").value);
+            tip = input >= 50 && input <= 300 ? 0.15 : 0.2;
+            var total = input + input * tip;
+            console.log("The bill was " + input + ",the tip was " + tip * input + ",and the total value " + total);
+        }
+    </script>
+</body>
+</html>
