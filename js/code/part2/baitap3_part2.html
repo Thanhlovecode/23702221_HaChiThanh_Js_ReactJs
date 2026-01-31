@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name1 = "Mark Miller";
+        let name2 = "John Smith";
+
+        function calcBMI(mass, height){
+            return mass / Math.pow(height, 2);
+        }
+
+        let markBMI = calcBMI(78, 1.69);
+        let johnBMI = calcBMI(92, 1.95);
+
+        if(markBMI > johnBMI){
+            console.log("Mark's BMI("+markBMI+") is higher than John's("+johnBMI+")");
+        }
+    </script>
+
+</body>
+</html>

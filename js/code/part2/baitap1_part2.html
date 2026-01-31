@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const calcAverage = (first, second, third) =>{
+            return (first + second + third) / 3;
+        }
+
+        function checkWinner(avgDolphins, avgKoalas){
+            if(avgDolphins > avgKoalas * 2){
+                console.log("Dolphins win (" + avgDolphins + ")");
+                return;
+            }else if(avgKoalas > avgDolphins * 2){
+                console.log("Koalas win (" + avgKoalas +")");
+                return;
+            }else{
+                console.log("No team wins!");
+            }
+        }
+        var dolphins = calcAverage(85,54,41);
+        var koalas = calcAverage(23,34,27);
+
+        checkWinner(dolphins, koalas);
+    </script>
+</body>
+</html>

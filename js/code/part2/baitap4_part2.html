@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        let bills = [22, 295, 176, 440, 37, 105, 1100, 86, 52];
+
+        let tips = [];
+        let totals = [];
+
+        function calcTip(bills){
+            for(let i=0; i<bills.length; i++){
+                var tip;
+                if(bills[i] > 50 && bills[i] < 300){
+                    tip = 0.15;
+                    tips.push(bills[i] * tip);
+                    totals.push(bills[i] + tips[i]);
+                }else{
+                    tip = 0.2;
+                    tips.push(bills[i] * tip);
+                    totals.push(bills[i] + tips[i]);
+                }
+            }
+        }
+
+        calcTip(bills);
+
+        function calcAverage(arr){
+            let sum = 0;
+            for(let i=0; i<arr.length; i++){
+                sum += arr[i];
+            }
+            return sum / arr.length;
+        }
+
+        var avgTips = calcAverage(tips);
+        var avgTotals = calcAverage(totals);
+
+        console.log("The average of tips is: "+ avgTips);
+        console.log("The average of totals is: " + avgTotals);
+   </script> 
+</body>
+</html>
