@@ -1,0 +1,77 @@
+.page-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.recipe-discovery-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.page-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.page-btn.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .recipe-discovery-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar-column {
+    display: none; /* In a real app, this would be a collapsible menu on mobile */
+  }
+}
